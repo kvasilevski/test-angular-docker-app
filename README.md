@@ -1,3 +1,19 @@
+# Usage:
+
+## Without a docker
+
+To run app without a docker eneter:
+1. Run `ng serve --open`
+
+## With a docker
+1. Run `ng build --prod`
+2. Run `docker image build -t test-angular-docker-app .`
+3. Run `docker run -p 3000:80 --rm test-angular-docker-app`
+
+If you now navigate to the “http://localhost:3000", you should get your initial Angular application up and running there. Moreover, the Nginx logs are redirected to your console output, so that you can see what’s happening inside the container.
+
+To run image without logging run docker as `docker run -d -p 3000:80 --rm test-angular-docker-app`
+
 # TestAngularDockerApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
